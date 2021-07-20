@@ -19,19 +19,26 @@ function Cards() {
               <h2 className="container__subtitle">
                 Заказ №123
               </h2>
-              <span>
-                305
-              </span>
+              <h2 className="container__subtitle container__subtitle_type_marker">
+                305 Р
+              </h2>
             </li>
             <li className="container__description container__description_type_time">
-              <span>
+              <span className="container__marker container__marker_type_data">
                 Сегодня: 12:00
               </span>
             </li>
           </ul>
           <ul className="container__product container__product_type_description">
-            <li className="container__description container__description_type_item">- товаров 5шт</li>
-            <li className="container__description container__description_type_product">- наименований 3шт</li>
+            <li className="container__description container__description_type_item">
+              <span className="container__marker">
+                - товаров 5шт
+              </span>
+            </li>
+            <li className="container__description container__description_type_product">
+              <span className="container__marker">
+                - наименований 3шт
+              </span></li>
           </ul>
         </li>
       </ul>

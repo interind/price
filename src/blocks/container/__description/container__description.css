@@ -1,4 +1,6 @@
 .container__description {
   display: flex;
   color: #888E99;
+  min-width: 200px;
+  margin: 0;
 }

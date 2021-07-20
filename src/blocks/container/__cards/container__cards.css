@@ -1,9 +1,10 @@
 .container__cards {
   display: flex;
   list-style: none;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   max-width: 100%;
   overflow-x: hidden;
-  padding: 0;
+  padding-left: 16px;
+  margin-top: 0;
 }
