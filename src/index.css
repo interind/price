@@ -8,5 +8,13 @@
 @import url('./blocks/container/__cards/container__cards.css');
 @import url('./blocks/container/__card/container__card.css');
 @import url('./blocks/container/__product/container__product.css');
+@import url('./blocks/container/__product/_type/container__product_type_order.css');
+@import url('./blocks/container/__product/_type/container__product_type_description.css');
 @import url('./blocks/container/__info/container__info.css');
 @import url('./blocks/container/__title/container__title.css');
+@import url('./blocks/container/__subtitle/container__subtitle.css');
+@import url('./blocks/container/__description/container__description.css');
+@import url('./blocks/container/__description/_type/container__description_type_info.css');
+@import url('./blocks/container/__description/_type/container__description_type_item.css');
+@import url('./blocks/container/__description/_type/container__description_type_time.css');
+@import url('./blocks/container/__description/_type/container__description_type_product.css');
