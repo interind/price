@@ -3,8 +3,11 @@
 @import url('./blocks/button/button.css');
 @import url('./blocks/button/_type/button_type_menu.css');
 @import url('./blocks/button/_type/button_type_filter.css');
+@import url('./blocks/button/_type/button_type_close.css');
 @import url('./blocks/app/app.css');
 @import url('./blocks/container/container.css');
+@import url('./blocks/container/_type/container_type_popup.css');
+@import url('./blocks/container/container_opened.css');
 @import url('./blocks/container/__cards/container__cards.css');
 @import url('./blocks/container/__card/container__card.css');
 @import url('./blocks/container/__product/container__product.css');

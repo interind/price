@@ -1,6 +1,10 @@
 import React from 'react';
 
-function Cards() {
+interface popup {
+  openedPopup: () => void,
+}
+
+function Cards(props: popup) {
   function scrollCards(evt: React.SyntheticEvent) {
     console.log(evt.target);
   }
@@ -13,7 +17,7 @@ function Cards() {
         <button className="button button_type_filter" type="button" />
       </div>
       <ul className="container__cards">
-        <li className="container__card">
+        <li className="container__card" onMouseDown={props.openedPopup}>
           <ul className="container__product container__product_type_order">
             <li className="container__description container__description_type_info">
               <h2 className="container__subtitle">
