@@ -1,0 +1,8 @@
+.button_type_menu {
+  background-image: url('../../../images/button/BlackIcon-main.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+}

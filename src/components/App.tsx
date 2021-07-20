@@ -1,9 +1,12 @@
 import React from 'react';
+import Cards from './Cards';
+import Header from './Header';
 
 function App() {
   return (
     <div className="app">
-      Привет мир
+      <Header />
+      <Cards />
     </div>
   );
 }

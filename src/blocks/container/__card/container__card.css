@@ -1,0 +1,9 @@
+.container__card {
+  margin-right: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.container__card:last-of-type {
+  margin-right: 0;
+}

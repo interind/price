@@ -1,0 +1,8 @@
+.container__cards {
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 100%;
+  overflow-x: hidden;
+}
