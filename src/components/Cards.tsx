@@ -30,22 +30,31 @@ function Cards(props: popup) {
     setOrder(el);
   }
   function scrollCards(evt: React.SyntheticEvent) {
-    console.log(evt.target);
+    evt.preventDefault();
   }
 
   const off: string = props.status ? 'container_off' : '';
   return (
     <React.Fragment>
-      <div className={`container ${off}`} onDragStart={scrollCards}>
+      <div className={`container ${off}`}>
         <div className="container__info">
           <h1 className="container__title">
             Список заказов
           </h1>
           <button className="button button_type_filter" type="button" />
         </div>
-          <ul className="container__cards">
+        <ul className="container__cards" onMouseDown={scrollCards}>
         { props.prices.map((el: price) => {
-            return (<li key={el.id} className="container__card" onMouseDown={() => getOrder(el)} onMouseUp={props.openedPopup}>
+          return (
+            <li
+              key={el.id}
+              className="container__card"
+              onDrag={scrollCards}
+              onClick={() => {
+                getOrder(el);
+                props.openedPopup();
+              }}
+            >
               <ul className="container__product container__product_type_order">
                 <li className="container__description container__description_type_info">
                   <h2 className="container__subtitle">
