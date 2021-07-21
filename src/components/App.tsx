@@ -1,10 +1,11 @@
 import React from 'react';
+import api from '../utils/api';
 import Cards from './Cards';
 import Header from './Header';
-import Popup from './Popup';
 
 function App() {
   const [status, setStatus] = React.useState(false);
+  const [prices, setPrices] = React.useState([]);
 
   const openedPopup = () => {
     setStatus(true);
@@ -13,11 +14,25 @@ function App() {
     setStatus(false);
   };
 
+  React.useEffect(() => {
+    api('https://u38027.netangels.ru/api/orders.php')
+      .then((res) => {
+        setPrices(res.reverse());
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+
+
   return (
     <div className="app">
       <Header />
-      <Cards openedPopup={openedPopup} status={status}/>
-      <Popup status={status} closePopup={closePopup} />
+      <Cards
+        prices={prices}
+        openedPopup={openedPopup}
+        closePopup={closePopup}
+        status={status}
+      />
     </div>
   );
 }

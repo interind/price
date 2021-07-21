@@ -5,3 +5,8 @@
   min-width: 327px;
   border-radius: 10px;
 }
+
+.button_type_sale:disabled {
+  background-color: #808080;
+  cursor: default;
+}
