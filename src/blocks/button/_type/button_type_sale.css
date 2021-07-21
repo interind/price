@@ -1,0 +1,7 @@
+.button_type_sale {
+  background-color: blue;
+  color: #fff;
+  min-height: 50px;
+  min-width: 327px;
+  border-radius: 10px;
+}

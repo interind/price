@@ -1,0 +1,12 @@
+.container__card_type_popup {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container__card_type_popup:hover {
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}

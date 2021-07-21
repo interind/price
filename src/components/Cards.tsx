@@ -2,14 +2,17 @@ import React from 'react';
 
 interface popup {
   openedPopup: () => void,
+  status: boolean,
 }
 
 function Cards(props: popup) {
   function scrollCards(evt: React.SyntheticEvent) {
     console.log(evt.target);
   }
+
+  const off: string = props.status ? 'container_off' : '';
   return (
-    <div className="container" onDragStart={scrollCards}>
+    <div className={`container ${off}`} onDragStart={scrollCards}>
       <div className="container__info">
         <h1 className="container__title">
           Список заказов

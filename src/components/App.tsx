@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Cards openedPopup={openedPopup}/>
+      <Cards openedPopup={openedPopup} status={status}/>
       <Popup status={status} closePopup={closePopup} />
     </div>
   );
