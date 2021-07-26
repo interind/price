@@ -15,13 +15,16 @@ interface good {
 
 function Popup(props: element) {
   const classStatus = props.status && 'container_opened';
-  const [buttonActive, setButtonActive] = React.useState(false);
   const [sale, setSale] = React.useState('');
+  const [result, setResult] = React.useState('');
 
-  function getSales() {
+  function getSales(): void {
     const sale: string = (props.el.sale / props.el.goods.reduce((e: any, cur: good) => e + cur.price, 0) * 100).toFixed(2);
+    const sum = props.el.goods.reduce((e: number, cr: good): number => e + (cr.price * cr.count), 0);
+    const result = sum - (sum / Number(sale));
     setSale(sale);
-    setButtonActive(true);
+    setResult(result.toFixed(2));
+
   }
 
   return (
@@ -75,9 +78,8 @@ function Popup(props: element) {
             className="button button_type_sale"
             onMouseDown={getSales}
             type="button"
-            disabled={buttonActive}
           >
-              Скидка составила
+              Итого: {result}
             </button>
           <p className="container__marker">
             Дата выдачи заказа 10 дней с момента оплаты

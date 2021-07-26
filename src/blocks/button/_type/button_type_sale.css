@@ -4,6 +4,10 @@
   min-height: 50px;
   min-width: 327px;
   border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: -apple-system, BlinkMacSystemFont, 'Fira Sans', sans-serif;
 }
 
 .button_type_sale:disabled {

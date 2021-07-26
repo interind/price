@@ -23,14 +23,16 @@ interface good {
 }
 
 
-function Cards(props: popup) {
+function Cards(props: popup): any {
   const [order, setOrder]: any = React.useState();
 
-  function getOrder(el: price) {
+  function getOrder(el: price): void {
     setOrder(el);
   }
-  function scrollCards(evt: React.SyntheticEvent) {
+  function scrollCards(evt: React.SyntheticEvent): void {
     evt.preventDefault();
+    console.dir(evt.target);
+
   }
 
   const off: string = props.status ? 'container_off' : '';
@@ -43,13 +45,13 @@ function Cards(props: popup) {
           </h1>
           <button className="button button_type_filter" type="button" />
         </div>
-        <ul className="container__cards" onMouseDown={scrollCards}>
+        <ul draggable="true" className="container__cards">
         { props.prices.map((el: price) => {
           return (
             <li
+              onDragEnter={scrollCards}
               key={el.id}
               className="container__card"
-              onDrag={scrollCards}
               onClick={() => {
                 getOrder(el);
                 props.openedPopup();
