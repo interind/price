@@ -25,14 +25,8 @@ interface good {
 
 function Cards(props: popup): any {
   const [order, setOrder]: any = React.useState();
-
   function getOrder(el: price): void {
     setOrder(el);
-  }
-  function scrollCards(evt: React.SyntheticEvent): void {
-    evt.preventDefault();
-    console.dir(evt.target);
-
   }
 
   const off: string = props.status ? 'container_off' : '';
@@ -49,7 +43,6 @@ function Cards(props: popup): any {
         { props.prices.map((el: price) => {
           return (
             <li
-              onDragEnter={scrollCards}
               key={el.id}
               className="container__card"
               onClick={() => {

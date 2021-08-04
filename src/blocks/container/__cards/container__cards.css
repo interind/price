@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: center;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: auto;
   padding-left: 16px;
   margin-top: 0;
   margin-bottom: 50px;

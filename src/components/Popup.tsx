@@ -24,8 +24,14 @@ function Popup(props: element) {
     const result = sum - (sum / Number(sale));
     setSale(sale);
     setResult(result.toFixed(2));
-
   }
+
+  React.useEffect(() => {
+    if (props.status) {
+      setSale('');
+      setResult('');
+    }
+  },[props.status]);
 
   return (
     <div className={`container container_type_popup ${classStatus}`}>

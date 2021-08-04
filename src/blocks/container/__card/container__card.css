@@ -10,8 +10,7 @@
 
 .container__card:hover {
   cursor: pointer;
-  box-shadow: 3px 2px 3px #000;
-  transform: translateY(-2px) scale(1.005) translateZ(0);
+  opacity: .5;
 }
 
 .container__card:last-of-type {
