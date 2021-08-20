@@ -59,7 +59,8 @@ function Popup(props: element) {
             Название наименование товара
           </span>
         </div>
-        { props.el && props.el.goods.map((go: good, index: number) => {
+        <div className="info">
+          { props.el && props.el.goods.map((go: good, index: number) => {
           return (<ul className="container__info container__info_type_order" key={go.id.replaceAll('-', '') + String(index)}>
             <li className="container__info container__info_type_popup">
               <h2 className="container__subtitle container__subtitle_type_product">
@@ -75,7 +76,8 @@ function Popup(props: element) {
               </h2>
             </li>
           </ul>)}
-        )}
+          )}
+        </div>
         <div className="container__product container__product_type_sale">
           <p className="container__marker">
             {sale ? `Скидка по заказу составила ${sale} %` : `Нажмите чтобы рассчитать скидку`}

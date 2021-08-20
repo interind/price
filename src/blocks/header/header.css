@@ -1,8 +1,8 @@
 .header {
   margin-bottom: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
   width: 100%;
-  flex: 1;
+  background: linear-gradient(180deg, #fff 20%, rgba(250, 250, 250, 0));
 }

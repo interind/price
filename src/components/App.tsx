@@ -1,6 +1,7 @@
 import React from 'react';
 import api from '../utils/api';
 import Cards from './Cards';
+import Footer from './Footer';
 import Header from './Header';
 
 function App() {
@@ -16,13 +17,13 @@ function App() {
 
   React.useEffect(() => {
     api('https://u38027.netangels.ru/api/orders.php')
-      .then((res) => {
+      .then((res: []): void =>  {
         setPrices(res.reverse());
+        console.log(res);
+
       })
       .catch((err) => console.log(err));
   }, []);
-
-
 
   return (
     <div className="app">
@@ -33,6 +34,7 @@ function App() {
         closePopup={closePopup}
         status={status}
       />
+      <Footer />
     </div>
   );
 }

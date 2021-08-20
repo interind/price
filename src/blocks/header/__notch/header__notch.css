@@ -1,0 +1,9 @@
+.header__notch {
+  max-width: 59%;
+  min-width: 59%;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  background: #000;
+  border-radius: 0 0 30px 30px;
+  margin: 0 auto;
+}

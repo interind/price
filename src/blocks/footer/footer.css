@@ -1,0 +1,8 @@
+.footer {
+  background-image: url(../../images/footer/footer.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  align-self: flex-end;
+  padding-bottom: 30px;
+}
